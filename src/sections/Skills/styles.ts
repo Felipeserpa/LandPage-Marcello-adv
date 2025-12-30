@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   section#skills {
-    background-color: #1e293b; /* bg-slate-900 */
+    background-color: #fff;
     padding: 4rem 1rem 4rem 1rem;
     text-align: center; /* centraliza título e texto */
   }

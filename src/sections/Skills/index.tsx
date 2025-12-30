@@ -3,7 +3,7 @@ import PriceCard from '../../components/PriceCards'; // Importa o componente de 
 import styled from 'styled-components';
 
 const SectionWrapper = styled.div`
-  background-color: #1e293b;
+  background-color: #fff;
   padding: 4rem 1rem;
   text-align: center;
 `;
@@ -11,7 +11,7 @@ const SectionWrapper = styled.div`
 const SectionHeader = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
-  color: white;
+  color: #0e0c0c;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 `;
@@ -28,11 +28,7 @@ const SectionParagraph = styled.p`
 function App() {
   return (
     <SectionWrapper>
-      <SectionHeader>Serviços & Investimentos</SectionHeader>
-      <SectionParagraph>
-        Soluções digitais com preços transparentes para você planejar seu
-        investimento com confiança.
-      </SectionParagraph>
+      <SectionHeader>Veja alguns dos nossos serviços:</SectionHeader>
       <PriceCard />
     </SectionWrapper>
   );

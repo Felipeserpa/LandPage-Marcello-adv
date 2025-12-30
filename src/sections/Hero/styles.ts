@@ -80,33 +80,45 @@ const Container = styled.section`
   }
 
   /* 📌 BOTÃO PRINCIPAL (ESTILO DA FOTO) */
+  /* 📌 BOTÃO PRINCIPAL (ESTILO EXATO DA FOTO) */
   .whatsapp-button-main {
-    background-color: #c5a059;
-    color: #ffffff;
-    border: none;
-    padding: 14px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-flex;
+    /* Cores e Degradê */
+    background: linear-gradient(180deg, #ffffff 0%, #d1d1d1 100%);
+    color: #0b1d10;
+    height: 60px;
+    width: 400px;
+
+    /* Formato das Pontas */
+    border-radius: 0px 20px 0px 20px;
+    border: 1px solid #ccc;
+    /* Espaçamento e Texto */
+    padding: 15px 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: none; /* Mantém o texto normal, sem ser tudo maiúsculo */
+    /* Alinhamento */
+    display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    gap: 12px;
+    cursor: pointer;
     text-decoration: none;
-    transition: 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width: fit-content;
+    /* Sombra para dar profundidade */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 
     svg {
-      color: #ffffff;
+      color: #0b1d10; /* Ícone escuro conforme o texto */
       font-size: 1.3rem;
     }
 
     &:hover {
-      background-color: #d4af37;
       transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      background: #ffffff;
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 
