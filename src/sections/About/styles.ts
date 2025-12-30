@@ -26,20 +26,6 @@ const Container = styled.div`
     justify-content: flex-end;
   }
 
-  .image-motion img {
-    width: 100%;
-    max-width: 380px; /* Tamanho controlado */
-    height: auto;
-    border-radius: 20px;
-
-    /* Moldura fina branca ao redor da foto */
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 12px;
-
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
-  }
-
   /* TEXTO E TIPOGRAFIA */
   article {
     flex: 1;

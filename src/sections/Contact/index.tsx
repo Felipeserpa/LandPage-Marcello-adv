@@ -6,11 +6,7 @@ export default function Contact() {
   return (
     <Container>
       <section id="contact" className="section-grey">
-        <div className="container">
-          <h1 className="section-title text-blue">Contato</h1>
-          <h3>Me envie uma mensagem que retornarei em breve!</h3>
-          <Form />
-        </div>
+        <div className="container"></div>
       </section>
     </Container>
   );
