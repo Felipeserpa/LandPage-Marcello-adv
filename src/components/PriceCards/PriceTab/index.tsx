@@ -5,7 +5,7 @@ const Card = styled.div`
   background-color: #ffffff;
   /* 📌 Formato assimétrico idêntico à foto (Top-Left e Bottom-Right maiores) */
   border-radius: 70px 15px 70px 15px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
   padding: 60px 40px;
   width: 100%;
   max-width: 380px;
@@ -49,9 +49,9 @@ const Title = styled.h3`
 const Description = styled.p`
   color: #444;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem; /* Descrição maior e mais legível */
+  font-size: 1.6rem; /* Descrição maior e mais legível */
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: 500;
 
   strong {
     color: #0b1d10;

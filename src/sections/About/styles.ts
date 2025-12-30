@@ -1,53 +1,117 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  #about .section-container {
+  #about.section-blue {
+    background-color: #0b301c; /* Cor exata da imagem */
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    margin-bottom: 10rem;
-    padding: 3rem;
+    padding: 80px 0;
   }
 
-  #about article {
-    padding-right: 3rem;
+  .section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; /* Espaço entre a foto e o texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
   }
 
-  #about article p {
-    font-size: 2rem;
-    color: ${(props) => props.theme.aliceBlue};
-    line-height: 2.8rem;
-    padding: 10px;
-  }
-  #about article li {
-    font-size: 2rem;
-    color: ${(props) => props.theme.aliceBlue};
-    line-height: 2.8rem;
+  /* FOTO COM EFEITO DE MOLDURA */
+  .image-motion {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 
-  #about picture img {
-    width: 200px;
-    border-radius: 0.5rem;
+  .image-motion img {
+    width: 100%;
+    max-width: 380px; /* Tamanho controlado */
+    height: auto;
+    border-radius: 20px;
+
+    /* Moldura fina branca ao redor da foto */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px;
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
   }
 
-  @media (max-width: 978px) {
-    #about article p {
-      text-align: left;
+  /* TEXTO E TIPOGRAFIA */
+  article {
+    flex: 1;
+    color: #ffffff;
+  }
+
+  .highlight-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+  }
+
+  article p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* BOTÃO WHATSAPP ESTILO PREMIUM */
+  .whatsapp-button-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #e6e6e6; /* Cinza bem claro */
+    color: #0b1d10;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    width: fit-content;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    svg {
+      font-size: 1.6rem;
+      color: #25d366; /* Ícone verde */
+    }
+
+    &:hover {
+      background: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     }
   }
 
-  @media (max-width: 930px) {
-    #about .section-container {
+  /* RESPONSIVO */
+  @media (max-width: 992px) {
+    .section-container {
       flex-direction: column;
-      padding: 0 3rem;
-      gap: 4rem;
+      text-align: center;
+      gap: 50px;
     }
 
-    #about article {
-      padding: 0;
+    .image-motion {
+      justify-content: center;
     }
 
-    #about picture img {
-      width: 34rem;
+    .image-motion img {
+      max-width: 300px;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .highlight-title {
+      font-size: 2.2rem;
     }
   }
 `;

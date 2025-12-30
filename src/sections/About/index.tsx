@@ -1,36 +1,67 @@
-import Loading from '../../components/Loading';
+import { FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import Container from './styles';
 
 export default function About() {
+  const WHATSAPP_URL = 'https://wa.me/5581984135753';
+
   return (
     <Container>
-      <section id="about" className="section-blue">
+      <section id="about">
         <div className="container">
-          <h1 className="section-title text-white">Sobre Mim</h1>
           <div className="section-container">
+            {/* LADO ESQUERDO: FOTO COM MOLDURA E ANIMAÇÃO */}
+            <motion.div
+              className="image-motion"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: 'easeOut' }}
+            >
+              <img src="fot01.png" alt="Advogado Marcello Rodrigo" />
+            </motion.div>
+
+            {/* LADO DIREITO: TEXTO E BOTÃO */}
             <article>
-              <p>Olá,Somos a Serpa Soluções em Tecnologia</p>
-              <p>
-                A Serpa Soluções em Tecnologia é uma empresa apaixonada por
-                tecnologia e focada em transformar ideias em soluções digitais
-                inovadoras. Desde o início de nossas atividades, em 2022, nos
-                dedicamos a criar sites, sistemas web e aplicativos mobile que
-                impulsionam os negócios de nossos clientes. Com uma equipe
-                experiente e multidisciplinar, oferecemos soluções
-                personalizadas e de alta qualidade, sempre alinhadas às
-                necessidades e objetivos de cada cliente. Nossa missão é
-                simplificar a vida das pessoas através da tecnologia,
-                proporcionando experiências digitais intuitivas e eficientes.
-              </p>
-              <p>Nossos serviços:</p>
-              <li>Desenvolvimento de sites personalizados</li>
-              <li>Criação de sistemas web sob medida;</li>
-              <li>Desenvolvimento de aplicativos mobile para iOS e Android;</li>
-              <li>Manutenção e suporte técnico.</li>
+              <motion.h2
+                className="highlight-title"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Por que confiar no nosso escritório?
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                Somos um escritório de advocacia com atuação em direito da
+                saúde. Nosso escritório estará empenhado na defesa dos seus
+                direitos. Prezamos pela comunicação pessoal e clara com nossos
+                clientes. Está na hora de garantir seus direitos de saúde com a
+                ajuda de especialistas! Clique no botão abaixo e dê o primeiro
+                passo em direção à segurança e ao suporte que você merece. Nosso
+                time de especialistas está pronto para lutar pelo que é seu por
+                direito.
+              </motion.p>
+
+              <motion.a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-button-main"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                <FaWhatsapp /> Fale com um especialista
+              </motion.a>
             </article>
-            <picture data-aos="fade-up">
-              /<img src="logo.png" alt="avatar.webp" />
-            </picture>
           </div>
         </div>
       </section>
