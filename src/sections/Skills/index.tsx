@@ -3,7 +3,7 @@ import PriceCard from '../../components/PriceCards'; // Importa o componente de 
 import styled from 'styled-components';
 
 const SectionWrapper = styled.div`
-  background-color: #fff;
+  background-color: #9b9595;
   padding: 4rem 1rem;
   text-align: center;
 `;
@@ -11,18 +11,9 @@ const SectionWrapper = styled.div`
 const SectionHeader = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0e0c0c;
+  color: #6d6666;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-`;
-
-const SectionParagraph = styled.p`
-  font-size: 1.125rem;
-  color: white;
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 function App() {

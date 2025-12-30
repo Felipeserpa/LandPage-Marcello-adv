@@ -1,117 +1,86 @@
-// PricingTab.js
+import React from 'react';
 import styled from 'styled-components';
 
 interface PricingTabProps {
-  popular?: boolean;
   planName: string;
-  price: number;
-  features: string[];
+  description: string; // Adicionado para o texto do card
+  features?: string[]; // Mantido para compatibilidade futura
 }
 
 const Card = styled.div`
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  width: 320px;
+  /* 📌 O segredo das pontas: Top-Left, Top-Right, Bottom-Right, Bottom-Left */
+  border-radius: 60px 15px 60px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 3rem 2rem;
+  width: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  align-items: center; /* Centraliza ícone e textos */
+  text-align: center;
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  border: 1px solid #f0f0f0;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
 `;
 
-const PopularBadge = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #10b981;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+const IconWrapper = styled.div`
+  margin-bottom: 2rem;
+  img {
+    width: 80px;
+    height: auto;
+    opacity: 0.7; /* Para dar o efeito suave do ícone da foto */
+  }
 `;
 
-const PlanName = styled.h2`
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-`;
+const Title = styled.h3`
+  color: #0b1d10; /* Verde escuro do site */
+  font-size: 1.4rem;
 
-const PriceText = styled.p`
-  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  color: #2563eb;
-  margin-bottom: 1.5rem;
 `;
 
-const CTAButton = styled.a`
-  background-color: #2563eb;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  margin-bottom: 1.5rem;
-  transition: background-color 0.3s;
-  cursor: pointer;
+const Description = styled.p`
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
 
-  &:hover {
-    background-color: #1d4ed8;
+  strong {
+    color: #0b1d10;
+    font-weight: 700;
   }
 `;
-
-const FeaturesList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-  text-align: left;
+const Feature = styled.p`
+  color: #1c1c1c;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
 `;
 
-const FeatureItem = styled.li`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-  color: #4b5563;
-`;
-
-const CheckIcon = styled.span`
-  color: #22c55e;
-  margin-right: 0.5rem;
-  font-weight: bold;
-`;
-
-function PricingTab(props: PricingTabProps) {
+function PricingTab({ planName, description, features }: PricingTabProps) {
   return (
     <Card>
-      {props.popular && <PopularBadge></PopularBadge>}
-      <PlanName>{props.planName}</PlanName>
-      <PriceText>A partir de R${props.price.toFixed(2)}</PriceText>
-      <CTAButton
-        href="https://wa.me/5581995773197?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento!"
-        target="_blank"
-        rel="noreferrer"
-      >
-        EU QUERO
-      </CTAButton>
-      <PlanName as="h3">Inclui:</PlanName>
-      <FeaturesList>
-        {props.features.map((feature, index) => (
-          <FeatureItem key={index}>
-            <CheckIcon>✔</CheckIcon>
-            {feature}
-          </FeatureItem>
-        ))}
-      </FeaturesList>
+      <IconWrapper>
+        {/* Substitua pelo caminho correto da sua imagem de globo */}
+        <img src="/servico.png" alt="Ícone de Serviço" />
+      </IconWrapper>
+
+      <Title>{planName}</Title>
+      <>
+        {features &&
+          features.map((feature, index) => (
+            <Feature key={index}>{feature}</Feature>
+          ))}{' '}
+      </>
+      <Description>{description}</Description>
     </Card>
   );
 }

@@ -6,6 +6,7 @@ const PriceCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
   align-items: stretch;
   gap: 2rem;
   flex-wrap: wrap;
@@ -23,39 +24,29 @@ const PriceCard = () => {
     <PriceCardContainer>
       {/* Plano Gratuito */}
       <PricingTab
-        planName="Landing Pages"
-        price={600}
+        planName="Reajuste abusivo de plano de saúde"
         features={[
-          'Design responsivo e moderno',
-          'Otimização para conversão',
-          'Integração com redes sociais',
-          'Formulário de contato',
+          'Um reajuste abusivo de plano de saúde é aquele que não segue os parâmetros estabelecidos pela Agência Nacional de Saúde Suplementar (ANS). A Justiça também pode ser acionada para questionar o reajuste abusivo',
         ]}
+        description={''}
       />
 
       {/* Plano Básico (Popular) */}
       <PricingTab
-        popular
-        planName="Sites Portfólio"
-        price={800}
+        planName="Negativa de tratamento e medicamentos"
         features={[
-          'Design personalizado',
-          'Galeria de projetos',
-          'Blog integrado',
-          'SEO básico',
+          'É quando um plano de saúde ou o sistema público de saúde se recusa a fornecer ou cobrir um tratamento ou medicamento prescrito por um médico.;',
         ]}
+        description={''}
       />
 
       {/* Plano Avançado */}
       <PricingTab
-        planName="Sistemas Personalizados + Apps"
-        price={1000}
+        planName="Negativa de cirurgias"
         features={[
-          'Analise de requisitos',
-          'Desenvolvimento sob medida',
-          'Integração com APIs',
-          'Suporte técnico',
+          'Em caso de negativa de cirurgia pelo plano de saúde, é possível recorrer à Justiça com o auxílio de um advogado especializado em direito da saúde. A negativa de cobertura de material cirúrgico ou de cirurgia indicada pelo médico pode ser considerada abusiva e revista judicialmente;',
         ]}
+        description={''}
       />
     </PriceCardContainer>
   );
