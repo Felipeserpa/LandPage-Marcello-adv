@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 100%;
-  background-color: #0b1d10; /* Verde escuro do tema */
+  background-color: #f8f9fa;
   position: relative;
 
   /* Linha Dourada no Topo */

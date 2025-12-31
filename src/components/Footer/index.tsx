@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="section-container">
           {/* LADO ESQUERDO: LOGO */}
           <div className="footer-brand">
-            <img src="logo.png" alt="Logo Marcello Rodrigo Advocacia" />
+            <img src="logoM.png" alt="Logo Marcelo Advogado" />
           </div>
 
           {/* LADO DIREITO: INFORMAÇÕES */}
