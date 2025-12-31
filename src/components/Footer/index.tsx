@@ -1,43 +1,35 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 import Container from './styles';
 
 export default function Footer() {
   return (
     <Container>
-      <footer className="container section-blue">
+      <footer className="footer-main">
         <div className="section-container">
-          <p>Desenvolvido por @Serpa Soluções em Tecnologia</p>
-          <div className="social-links">
-            <a
-              href=" https://wa.me/5581995773197?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento!"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaWhatsapp />
-            </a>
-
-            <a
-              href=" https://github.com/Felipeserpa"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href=" https://www.linkedin.com/in/felipe-serpa-149b88223/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="mailto:stecnologico@hotmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaEnvelope />
-            </a>
+          {/* LADO ESQUERDO: LOGO */}
+          <div className="footer-brand">
+            <img src="logo.png" alt="Logo Marcello Rodrigo Advocacia" />
           </div>
+
+          {/* LADO DIREITO: INFORMAÇÕES */}
+          <div className="footer-info">
+            <h3>Mais informações</h3>
+            <a href="mailto:marcellorod@hotmail.com">
+              <FaEnvelope /> marcellorod@hotmail.com
+            </a>
+            <p>
+              <FaMapMarkerAlt /> Rua Francisco da Cunha, 392, Boa Viagem –
+              Recife PE.
+            </p>
+          </div>
+        </div>
+
+        {/* PARTE INFERIOR: COPYRIGHT (CENTRALIZADO E CINZA) */}
+        <div className="footer-bottom">
+          <p>
+            © Copyright 2024. Todos os direitos reservados. Desenvolvido por
+            <span> Serpa Soluções Tecnológicas.</span>
+          </p>
         </div>
       </footer>
     </Container>

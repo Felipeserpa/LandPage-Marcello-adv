@@ -1,46 +1,106 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  .section-blue {
-    padding-bottom: 0;
+  width: 100%;
+  background-color: #0b1d10; /* Verde escuro do tema */
+  position: relative;
+
+  /* Linha Dourada no Topo */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #c4a77d;
+  }
+
+  .footer-main {
+    padding: 60px;
   }
 
   .section-container {
-    width: 100%;
-    margin: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    @media (max-width: 930px) {
-      flex-direction: column;
-      gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    //argin-bottom: 50px; /* Espaço para o copyright em baixo */
+  }
+
+  /* Logo */
+  .footer-brand img {
+    max-width: 220px; /* Aumentado conforme a foto */
+    height: auto;
+  }
+
+  /* Bloco de Informações (Direita) */
+  .footer-info {
+    text-align: right;
+
+    h3 {
+      color: #c5a059;
+      font-size: 1.4rem; /* Texto maior */
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    p,
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem; /* Texto maior */
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+
+    svg {
+      color: #c5a059;
     }
   }
 
-  footer p {
-    font-size: 2rem;
-    font-weight: 600;
-    color: ${(props) => props.theme.secondaryColor};
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  footer .social-links {
-    padding: 0 4rem;
-  }
-
-  footer .container {
-    height: 9rem;
+  /* Parte de Baixo (Desenvolvido por...) */
+  .footer-bottom {
     width: 100%;
-    background-color: ${(props) => props.theme.black};
-    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+    padding-top: 20px;
     text-align: center;
-    @media (max-width: 930px) {
-      height: 8rem;
-      width: 100%;
+
+    p {
+      color: rgba(255, 255, 255, 0.5); /* Cinza Transparente */
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+
+      span {
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  /* Responsivo */
+  @media (max-width: 930px) {
+    .section-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .footer-info {
+      text-align: center;
+      align-items: center;
+
+      p,
+      a {
+        justify-content: center;
+      }
     }
   }
 `;

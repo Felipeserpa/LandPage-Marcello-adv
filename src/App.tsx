@@ -4,7 +4,7 @@ import About from './sections/About';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 //import Header from './components/Header';
-import Portfolio from './sections/clientes';
+//port Portfolio from './sections/clientes';
 import Hero from './sections/Hero';
 import Skills from './sections/Skills';
 import GlobalStyles from './assets/styles/GlobalStyles';
@@ -20,7 +20,6 @@ function App() {
       <Skills />
 
       <About />
-      <Contact />
       <Footer />
     </ThemeProvider>
   );
