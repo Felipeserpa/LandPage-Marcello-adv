@@ -14,6 +14,7 @@ export default function Footer() {
           {/* LADO DIREITO: INFORMAÇÕES */}
           <div className="footer-info">
             <h3>Mais informações</h3>
+            <p>(81) 98413-5753</p>
             <a href="mailto:marcellorod@hotmail.com">
               <FaEnvelope /> marcellorod@hotmail.com
             </a>

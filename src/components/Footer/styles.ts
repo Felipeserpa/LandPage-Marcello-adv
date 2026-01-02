@@ -40,7 +40,7 @@ const Container = styled.div`
     text-align: right;
 
     h3 {
-      color: #c5a059;
+      color: #131212ff;
       font-size: 1.4rem; /* Texto maior */
       margin-bottom: 15px;
       font-weight: 700;
@@ -48,9 +48,9 @@ const Container = styled.div`
 
     p,
     a {
-      color: #ffffff;
+      color: #161515ff;
       text-decoration: none;
-      font-size: 1.1rem; /* Texto maior */
+      font-size: 1.3rem;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -60,25 +60,25 @@ const Container = styled.div`
     }
 
     svg {
-      color: #c5a059;
+      color: #131211ff;
     }
   }
 
   /* Parte de Baixo (Desenvolvido por...) */
   .footer-bottom {
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+    border-top: 1px solid rgba(66, 58, 58, 0.1); /* Linha divisória sutil */
     padding-top: 20px;
     text-align: center;
 
     p {
-      color: rgba(255, 255, 255, 0.5); /* Cinza Transparente */
-      font-size: 1rem;
+      color: rgba(14, 12, 12, 0.5); /* Cinza Transparente */
+      font-size: 1.4rem;
       letter-spacing: 0.5px;
 
       span {
         font-weight: bold;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(8, 8, 8, 0.7);
       }
     }
   }
