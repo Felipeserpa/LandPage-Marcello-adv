@@ -4,7 +4,7 @@ const Container = styled.section`
   .presentation-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     min-height: 100vh;
     width: 100%;
     background-image: url('/img1.webp');
@@ -12,9 +12,11 @@ const Container = styled.section`
     background-position: center;
     position: relative;
     z-index: 1;
+    padding: 20px 0; /* Reduzi o padding vertical */
 
     @media (max-width: 768px) {
-      padding-top: 80px;
+      padding-top: 40px;
+      justify-content: flex-start;
     }
   }
 
@@ -22,111 +24,100 @@ const Container = styled.section`
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(11, 29, 16, 0.85); /* Overlay Verde da foto */
+    background-color: rgba(11, 29, 16, 0.85);
     z-index: -1;
   }
 
   .content-wrapper {
     max-width: 1120px;
-    margin-left: 5%;
-    width: 100%;
+    margin-left: 8%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha tudo na esquerda */
+    align-items: flex-start;
 
     @media (max-width: 768px) {
       margin: 0 auto;
+      width: 100%;
       padding: 0 20px;
+      align-items: center;
+      text-align: center;
     }
   }
 
   .logo-container {
-    max-width: 500px;
-    margin-bottom: 0;
+    width: 100%;
+    max-width: 400px; /* Reduzi um pouco o tamanho máximo da logo */
+    margin-bottom: -10px; /* Margem negativa para aproximar o texto */
 
     img {
       width: 100%;
       height: auto;
       display: block;
     }
+
+    @media (max-width: 768px) {
+      max-width: 220px;
+      margin-bottom: 10px;
+    }
   }
 
   .text-container {
-    max-width: 550px;
-    margin-bottom: 40px;
-
+    max-width: 650px;
     color: white;
 
     h1 {
-      /* 📌 MARGEM NEGATIVA: Puxa o texto para cima da logo */
-      margin-top: -80px;
-      font-size: 4rem;
+      /* Sem margem negativa gigante, apenas ajuste fino */
+      margin-top: 0;
+      font-size: clamp(2rem, 5vw, 3.8rem);
       line-height: 1.1;
       font-weight: 800;
-      margin-bottom: 12px;
-
-      @media (max-width: 768px) {
-        font-size: 2.2rem;
-        margin-top: -25px;
-      }
+      margin-bottom: 15px;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: clamp(1rem, 2vw, 1.3rem);
       font-weight: 400;
       margin-bottom: 2rem;
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.85);
     }
   }
 
-  /* 📌 BOTÃO PRINCIPAL (ESTILO DA FOTO) */
-  /* 📌 BOTÃO PRINCIPAL (ESTILO EXATO DA FOTO) */
+  /* 📌 BOTÃO PRINCIPAL */
   .whatsapp-button-main {
-    /* Cores e Degradê */
     background: linear-gradient(180deg, #ffffff 0%, #d1d1d1 100%);
     color: #0b1d10;
-    height: 60px;
-    width: 400px;
-
-    /* Formato das Pontas */
+    min-height: 60px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 0px 20px 0px 20px;
     border: 1px solid #ccc;
-    /* Espaçamento e Texto */
-    padding: 15px 10px;
-    font-size: 2rem;
+    padding: 15px 25px;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: 700;
-    text-transform: none; /* Mantém o texto normal, sem ser tudo maiúsculo */
-    /* Alinhamento */
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    cursor: pointer;
     text-decoration: none;
-    /* Sombra para dar profundidade */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 
     svg {
-      color: #0b1d10; /* Ícone escuro conforme o texto */
-      font-size: 1.3rem;
+      font-size: 1.5em;
     }
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-      background: #ffffff;
-    }
-
-    &:active {
-      transform: translateY(0);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
   }
 
-  /* 📌 BOTÃO FLUTUANTE (CANTO DIREITO) */
+  /* WhatsApp Flutuante */
   .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     background-color: #25d366;
     color: white;
     width: 60px;
@@ -135,15 +126,9 @@ const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 32px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
     z-index: 1000;
-    transition: 0.3s;
-
-    &:hover {
-      transform: scale(1.1);
-      background-color: #128c7e;
-    }
   }
 `;
 

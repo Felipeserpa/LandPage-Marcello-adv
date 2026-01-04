@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Container from './styles';
+import { motion } from 'framer-motion';
 
 export default function Presentation() {
   const WHATSAPP_URL = 'https://wa.me/5581984135753';
@@ -20,7 +21,15 @@ export default function Presentation() {
       <div className="presentation-container" id="inicio">
         <div className="content-wrapper">
           <div className="logo-container">
-            <img src="logo.png" alt="Marcello Rodrigues" />
+            <motion.div
+              className="image-motion"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: 'easeOut' }}
+            >
+              <img src="logo.png" alt="Marcello Rodrigues" />
+            </motion.div>
           </div>
 
           <div className="text-container">
