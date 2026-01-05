@@ -6,6 +6,11 @@ import { motion } from 'framer-motion';
 export default function Presentation() {
   const WHATSAPP_URL = 'https://wa.me/5581984135753';
 
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact');
+    }
+  };
   return (
     <Container>
       {/* Botão Flutuante no canto direito */}
@@ -14,6 +19,7 @@ export default function Presentation() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleWhatsAppClick}
       >
         <FaWhatsapp />
       </a>
@@ -44,6 +50,7 @@ export default function Presentation() {
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-button-main"
+              onClick={handleWhatsAppClick}
             >
               <FaWhatsapp /> Fale com um especialista
             </a>

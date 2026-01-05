@@ -5,6 +5,12 @@ import Container from './styles';
 export default function About() {
   const WHATSAPP_URL = 'https://wa.me/5581984135753';
 
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact');
+    }
+  };
+
   return (
     <Container>
       <section id="about">
@@ -58,6 +64,7 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}
+                onClick={handleWhatsAppClick}
               >
                 <FaWhatsapp /> Fale com um especialista
               </motion.a>
