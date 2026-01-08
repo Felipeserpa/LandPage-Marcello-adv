@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcello Rodrigo</title>
+    <title>Marcello Rodrigo | Advogado Especialista em Planos de Saúde</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,12 +13,6 @@
       rel="stylesheet"
     />
 
-    <title>Marcello Rodrigo | Advogado Especialista em Planos de Saúde</title>
-
-    <meta
-      name="description"
-      content="Teve cirurgia ou medicamento negado pelo plano? Especialista em reajuste abusivo e liminares contra planos de saúde e ANS. Atendimento imediato."
-    />
     <meta
       name="description"
       content="Especialista em causas contra planos de saúde: negativa de cirurgia, medicamentos de alto custo e reajustes abusivos. Atendimento jurídico especializado."
@@ -34,63 +29,63 @@
       property="og:description"
       content="Recupere seus direitos contra abusos de planos de saúde."
     />
-    <meta property="og:image" content="https://marcellorodrigoadv.com.br/" />
+    <meta
+      property="og:image"
+      content="https://marcellorodrigoadv.com.br/og-image.jpg"
+    />
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '2365333570587048');
+      fbq('track', 'PageView');
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZJ4G6CRLLM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-ZJ4G6CRLLM');
+    </script>
   </head>
 
-  <script>
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod
-          ? n.callMethod.apply(n, arguments)
-          : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js'
-    );
-
-    fbq('init', '2365333570587048'); // Seu ID aqui
-    fbq('track', 'PageView');
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-ZJ4G6CRLLM"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-ZJ4G6CRLLM');
-  </script>
-
-  <noscript>
-    <img
-      height="1"
-      width="1"
-      style="display: none"
-      src="https://www.facebook.com/tr?id=2365333570587048&ev=PageView&noscript=1"
-    />
-  </noscript>
-
   <body>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2365333570587048&ev=PageView&noscript=1"
+      />
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
