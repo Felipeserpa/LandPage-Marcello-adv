@@ -68,8 +68,7 @@
       fbq('track', 'PageView');
     </script>
 
-    <!-- Google Analytics GA4 -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (GA4 + Google Ads) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-YBWT3J66NL"
@@ -81,45 +80,11 @@
       }
       gtag('js', new Date());
 
+      // Google Analytics GA4
       gtag('config', 'G-YBWT3J66NL');
-    </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-17872722383"
-    ></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-17872722383"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
+      // Google Ads
       gtag('config', 'AW-17872722383');
     </script>
   </head>
-
-  <body>
-    <!-- Facebook Pixel noscript -->
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=2365333570587048&ev=PageView&noscript=1"
-      />
-    </noscript>
-
-    <div id="root"></div>
-
-    <!-- React / Vite -->
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
 </html>
