@@ -6,9 +6,24 @@ export default function About() {
   const WHATSAPP_URL = 'https://wa.me/5581984135753';
 
   const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    // Facebook Pixel
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Contact');
     }
+
+    // Google Ads Conversion
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        send_to: 'AW-17872722383/FGwPCL_K5eIbEM-zsMpC',
+      });
+    }
+
+    // Abre WhatsApp após enviar eventos
+    setTimeout(() => {
+      window.open(WHATSAPP_URL, '_blank');
+    }, 300);
   };
 
   return (
@@ -16,7 +31,7 @@ export default function About() {
       <section id="about">
         <div className="container">
           <div className="section-container">
-            {/* LADO ESQUERDO: FOTO COM MOLDURA E ANIMAÇÃO */}
+            {/* LADO ESQUERDO */}
             <motion.div
               className="image-motion"
               initial={{ opacity: 0, x: -100 }}
@@ -27,7 +42,7 @@ export default function About() {
               <img src="fot01.png" alt="Advogado Marcello Rodrigo" />
             </motion.div>
 
-            {/* LADO DIREITO: TEXTO E BOTÃO */}
+            {/* LADO DIREITO */}
             <article>
               <motion.h2
                 className="highlight-title"
@@ -49,10 +64,7 @@ export default function About() {
                 saúde. Nosso escritório estará empenhado na defesa dos seus
                 direitos. Prezamos pela comunicação pessoal e clara com nossos
                 clientes. Está na hora de garantir seus direitos de saúde com a
-                ajuda de especialistas! Clique no botão abaixo e dê o primeiro
-                passo em direção à segurança e ao suporte que você merece. Nosso
-                time de especialistas está pronto para lutar pelo que é seu por
-                direito.
+                ajuda de especialistas!
               </motion.p>
 
               <motion.a
