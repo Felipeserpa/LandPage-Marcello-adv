@@ -5,7 +5,31 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Marcello Rodrigo | Advogado Especialista em Planos de Saúde</title>
+    <title>Marcello Rodrigo | Advogado em Direito da Saúde</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Atuação jurídica em negativas de tratamento, medicamentos de alto custo e reajustes de planos de saúde."
+    />
+    <meta
+      name="keywords"
+      content="advogado plano de saúde, negativa de tratamento, medicamento alto custo, reajuste plano de saúde"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://marcellorodrigoadv.com.br/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marcello Rodrigo | Direito da Saúde" />
+    <meta
+      property="og:description"
+      content="Atuação jurídica em demandas contra planos de saúde."
+    />
+    <meta
+      property="og:image"
+      content="https://marcellorodrigoadv.com.br/og-image.jpg"
+    />
+    <meta property="og:type" content="website" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,60 +39,7 @@
       rel="stylesheet"
     />
 
-    <!-- SEO -->
-    <meta
-      name="description"
-      content="Especialista em causas contra planos de saúde: negativa de cirurgia, medicamentos de alto custo e reajustes abusivos. Atendimento jurídico especializado."
-    />
-    <meta
-      name="keywords"
-      content="advogado plano de saúde, negativa de cirurgia, liminar contra plano de saúde, reajuste abusivo ANS"
-    />
-
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Marcello Rodrigo | Especialista em Direito da Saúde"
-    />
-    <meta
-      property="og:description"
-      content="Recupere seus direitos contra abusos de planos de saúde."
-    />
-    <meta
-      property="og:image"
-      content="https://marcellorodrigoadv.com.br/og-image.jpg"
-    />
-
-    <!-- Facebook Pixel -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        'script',
-        'https://connect.facebook.net/en_US/fbevents.js'
-      );
-      fbq('init', '2365333570587048');
-      fbq('track', 'PageView');
-    </script>
-
-    <!-- Google tag (GA4 + Google Ads) -->
+    <!-- Google Analytics + Ads -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-YBWT3J66NL"
@@ -80,23 +51,49 @@
       }
       gtag('js', new Date());
 
-      // Google Analytics
-      gtag('config', 'G-YBWT3J66NL');
-
-      // Google Ads
-      gtag('config', 'AW-17872722383');
+      gtag('config', 'G-YBWT3J66NL'); // GA4
+      gtag('config', 'AW-17872722383'); // Google Ads
     </script>
+
+    <!-- Facebook Pixel (DESATIVADO PARA TESTE)
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2365333570587048");
+      fbq("track", "PageView");
+    </script>
+    -->
   </head>
 
   <body>
-    <!-- Facebook Pixel noscript -->
+    <!-- Conteúdo mínimo visível (importante pro Google) -->
     <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=2365333570587048&ev=PageView&noscript=1"
-      />
+      <h1>Marcello Rodrigo - Advogado em Direito da Saúde</h1>
+      <p>
+        Atuação jurídica em casos envolvendo planos de saúde, negativas de
+        tratamento, medicamentos e reajustes.
+      </p>
     </noscript>
 
     <div id="root"></div>
