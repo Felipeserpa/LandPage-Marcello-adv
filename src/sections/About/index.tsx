@@ -5,25 +5,20 @@ import Container from './styles';
 export default function About() {
   const WHATSAPP_URL = 'https://wa.me/5581984135753';
 
-  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-
-    // Facebook Pixel
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Contact');
-    }
-
-    // Google Ads Conversion
+  const handleWhatsAppClick = () => {
+    // 1. Google Ads Conversion - Disparo imediato
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: 'AW-17872722383/FGwPCL_K5eIbEM-zsMpC',
       });
     }
 
-    // Abre WhatsApp após enviar eventos
-    setTimeout(() => {
-      window.open(WHATSAPP_URL, '_blank');
-    }, 300);
+    // 2. Facebook Pixel - Disparo imediato
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact');
+    }
+
+    // O link abrirá naturalmente pelo href do <a>, sem risco de bloqueio de pop-up.
   };
 
   return (
