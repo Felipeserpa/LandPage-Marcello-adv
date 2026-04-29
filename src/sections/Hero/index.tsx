@@ -4,7 +4,7 @@ import Container from './styles';
 import { motion } from 'framer-motion';
 
 export default function Presentation() {
-  const WHATSAPP_URL = 'https://wa.me';
+  const WHATSAPP_URL = 'https://wa.me/5581984135753';
 
   // Função simplificada: apenas rastreia, o link abre sozinho
   const handleWhatsAppClick = () => {
