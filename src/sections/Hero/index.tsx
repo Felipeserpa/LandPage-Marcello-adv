@@ -4,32 +4,26 @@ import Container from './styles';
 import { motion } from 'framer-motion';
 
 export default function Presentation() {
-  const WHATSAPP_URL = 'https://wa.me/5581984135753';
+  const WHATSAPP_URL = 'https://wa.me';
 
-  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-
-    // Facebook Pixel
+  // Função simplificada: apenas rastreia, o link abre sozinho
+  const handleWhatsAppClick = () => {
+    // 1. Facebook Pixel
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Contact');
     }
 
-    // Google Ads Conversion
+    // 2. Google Ads Conversion
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: 'AW-17872722383/FGwPCL_K5eIbEM-zsMpC',
       });
     }
-
-    // Abre o WhatsApp após enviar os eventos
-    setTimeout(() => {
-      window.open(WHATSAPP_URL, '_blank');
-    }, 300);
   };
 
   return (
     <Container>
-      {/* Botão flutuante WhatsApp */}
+      {/* Botão flutuante WhatsApp - CORRIGIDO */}
       <a
         href={WHATSAPP_URL}
         className="whatsapp-float"
@@ -61,7 +55,7 @@ export default function Presentation() {
             </h1>
             <h2>Nossa equipe está pronta para te atender, entre em contato!</h2>
 
-            {/* Botão principal */}
+            {/* Botão principal - CORRIGIDO */}
             <a
               href={WHATSAPP_URL}
               target="_blank"
